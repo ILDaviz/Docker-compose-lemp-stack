@@ -10,7 +10,7 @@ services:
         env_file:
             - .env
         volumes:
-            - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+            - ./config/php/php.ini:/usr/local/etc/php/php.ini
             - .:/var/www:cached
 
     nginx:
@@ -25,7 +25,7 @@ services:
             - ${SERVER_PORT}:80
             - ${SERVER_PORT_SSL}:443
         volumes:
-            - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+            - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
             - ./log:/var/log/nginx
             - ./public:/var/www/public
     
@@ -40,9 +40,9 @@ services:
             - MYSQL_USER=${DB_USER}
             - MYSQL_PASSWORD=${DB_PASSWORD}
         volumes:
-            - ./docker/mysql/custom.cnf:/etc/mysql/conf.d/custom.cnf
+            - ./config/mysql/custom.cnf:/etc/mysql/conf.d/custom.cnf
             - ./log:/var/log/mysql
-            - ./docker/db:/var/lib/mysql:cached
+            - ./config/db:/var/lib/mysql:cached
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
