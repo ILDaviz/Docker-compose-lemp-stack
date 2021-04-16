@@ -23,9 +23,6 @@
 | log (post up)| Contain log               |
 | public       | Root folder               |
 
-## :whale: Docker images
-https://github.com/atillay/docker-images/tree/master/lemp
-
 ## :tent: Use a virtual host
 - On your machine, run `$ sudo nano /etc/hosts` and add `127.0.0.1   myhost.local`
 - Change the server name in `docker/nginx/nginx.conf#L3` to `myhost.local`
