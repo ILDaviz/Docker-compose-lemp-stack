@@ -2,3 +2,10 @@
 character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
 skip-character-set-client-handshake
+#-- Log Query
+#general_log_file = /var/log/mysql/query_list.log
+#general_log = 1
+#-- Log Slow Query
+#slow_query_log = 1
+#slow-query_log_file = /var/log/mysql/mysql-slow.log
+#long_query_time = 1

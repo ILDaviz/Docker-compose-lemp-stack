@@ -1,7 +1,7 @@
-# DOCKER LEMP
+# DOCKER LEMP 🚀
 - Nginx
 - PHP 7.2-fpm or 7.3-fpm
-- MySQL
+- MySQL5.7.33 or MariaDB or MySQL8
 - PHPMyAdmin
 - Maildev
 
@@ -10,12 +10,18 @@
 - `cp .env.dist .env`  
 - `docker-compose up`
 
-| Service      | Path                    |
-| ------------ | ----------------------- |
-| Website      | `http://localhost:8080` | 
-| PhpMyAdmin   | `http://localhost:8081` |
-| Mail catcher | `http://localhost:8082` |
-| Logs         | `log/`                  |
+| Service      | Path                      |
+| ------------ | ------------------------- |
+| Website      | `http://localhost:80`     | 
+| PhpMyAdmin   | `http://localhost:8081`   |
+| Mail catcher | `http://localhost:8082`   |
+
+| Folder       | Note                      |
+| ------------ | ------------------------- |
+| bin          | Contain all Dockerfile    | 
+| docker       | Contain all settings      |
+| log (post up)| Contain log               |
+| public       | Root folder               |
 
 ## :whale: Docker images
 https://github.com/atillay/docker-images/tree/master/lemp
